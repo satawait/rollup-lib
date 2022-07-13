@@ -1,12 +1,4 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var constants = require('src/constants/index.ts');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var constants__default = /*#__PURE__*/_interopDefaultLegacy(constants);
+import constants from 'src/constants/index.ts';
 
 const sum$1 = (a, b, ...c) => {
     if (c.length) {
@@ -37,7 +29,7 @@ const printAnswer = async () => {
 
 const sumPrintFunc$1 = async (a, b, ...c) => {
     const answer1 = await printAnswer();
-    return `计算结果是${sum$1(a, b, ...c)}和${add_1(a, b)}和${sum(a, b)}和${answer}和${answer1}和${constants__default["default"].normal}`;
+    return `计算结果是${sum$1(a, b, ...c)}和${add_1(a, b)}和${sum(a, b)}和${answer}和${answer1}和${constants.normal}`;
 };
 sumPrintFunc$1(1, 2, 3);
 
@@ -51,4 +43,4 @@ const sumPrintFunc = (a, b, ...c) => {
 const version = '1.0.0';
 sumPrintFunc(1, 2, 3);
 
-exports.version = version;
+export { version };
