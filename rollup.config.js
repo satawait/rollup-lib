@@ -53,7 +53,7 @@ export default {
         { find: '@', replacement: path.resolve(__dirname, './src') },
       ]
     }),
-    nodeResolve(), // 好像不使用也没问题
+    nodeResolve(), // 好像不使用也没问题 ---很多第三方依赖很早就有了，所以用的是commonjs模块导出，rollup打包的话，需要安装插件
     commonjs({
       extensions: ['.js', '.ts']
     }),
